@@ -149,11 +149,11 @@ function App() {
       📧 Email Me
     </a>
 
-    <a href="https://github.com/RodrickGulu" target="_blank">
+    <a href="https://github.com/RodrickGulu" target="_blank" rel="noreferrer">
       💻 GitHub
     </a>
 
-    <a href="https://wa.me/254791008970" target="_blank">
+    <a href="https://wa.me/254791008970" target="_blank" rel="noreferrer">
       💬 WhatsApp
     </a>
 
