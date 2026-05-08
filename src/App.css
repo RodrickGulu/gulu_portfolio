@@ -8,6 +8,9 @@
   --radius: 14px;
   --shadow: 0 10px 30px rgba(0,0,0,0.25);
 }
+*{
+  transition: all 0.3s ease;
+}
 
 html {
   scroll-behavior: smooth;
@@ -24,7 +27,21 @@ body {
   transition: 0.3s ease;
 }
 
+/* DARK MODE */
+.dark-mode {
+  background-color: white;
+  color: #0f172a;
+}
+
 /* NAVBAR */
+.dark-mode .navbar{
+  background-color: whitesmoke;
+  border-bottom: 1px solid grey;
+}
+
+.dark-mode .navbar a{
+  color:#1e293b
+}
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -100,6 +117,7 @@ body {
   font-size: 52px;
   margin-bottom: 10px;
   background: linear-gradient(90deg, #38bdf8, #a78bfa);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -168,7 +186,25 @@ body {
   margin: auto;
 }
 
+/*Toggle Button*/
+.theme-toggle {
+  margin-left: 15px;
+  padding: 8px 12px;
+  border: none;
+  font-size: 1p6x;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
 /* CARDS */
+.dark-mode .card,
+.dark-mode .timeline-item,
+.dark-mode .skill,
+.dark-mode .projects h2,
+.dark-mode .contact-box a {
+  background-color: white;
+  color: #1e293b
+}
 .card {
   background: var(--card);
   padding: 22px;
@@ -246,6 +282,11 @@ body {
   font-size: 15px;
 }
 
+.dark-mode .footer{
+  background-color: white;
+  border-top: 1px solid grey;
+  color: #1e293b;
+}
 .footer {
   margin-top: 60px;
   padding: 25px 20px;

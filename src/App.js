@@ -1,19 +1,38 @@
 import "./App.css";
+import { useState, useEffect} from "react";
 
 function App() {
+  const [darkMode, setDarkMode] = useState(() =>{
+    const savedTheme = localStorage.getItem("theme")
+    return savedTheme === "dark";
+  });
+
+  useEffect(() => {
+    if (darkMode) {
+      document.body.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.body.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    }
+  }, [darkMode]);
+
   return (
-    <div className="app">
+    <div className={`app ${darkMode ? "dark-mode" : ""}`}>
 
       {/* NAVBAR */}
       <header className="navbar">
         <h2>Rodrick Gulu Jonathan</h2>
         <nav>
           <a href="#home">Home</a>
-	  <a href="#about">About</a>
-	  <a href="#experience">Experience</a>
+	        <a href="#about">About</a>
+	        <a href="#experience">Experience</a>
           <a href="#projects">Projects</a>
           <a href="#skills">Skills</a>
-	  <a href="#contact">Contact</a>
+	        <a href="#contact">Contact</a>
+          <button className="theme-toggle" onClick={() => setDarkMode(!darkMode)}>
+            {darkMode ? "☀️" : "🌙"}
+          </button>
         </nav>
       </header>
 
