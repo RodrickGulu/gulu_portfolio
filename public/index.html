@@ -39,5 +39,23 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+
+    <link rel="stylesheet" href="https://storage.googleapis.com/mychatbot-widget-assets/v1/style.css" />
+<script src="https://storage.googleapis.com/mychatbot-widget-assets/v1/widget.js"></script>
+<div id="my-chat-widget-container"></div>
+<script>
+  MyChatBot.mount('#my-chat-widget-container', {
+    account_id: "ef39e993-bcb1-4730-a328-b919c32f90d0",
+    widget_id: "site-38275",
+    api_url: 'https://api.mychatbot.app',
+    assistant_name: "Gulu Portfolio Assistant",
+    color: "#6F52E0",
+    lang: 'en',
+    ad_widget_title: '',
+    ad_widget_description: '',
+    ad_popup_messages: []
+  });
+</script>
+    
   </body>
 </html>
